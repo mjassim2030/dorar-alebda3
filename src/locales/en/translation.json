@@ -1,0 +1,74 @@
+{
+  "brand": "Dorar Creative",
+
+  "lang": { "ar": "العربية", "en": "English", "confidentStart": "Confident Start" },
+
+  "hero": {
+    "kicker": "A confident start to your school year",
+    "title": "Golden Secrets for Powerful Beginnings",
+    "tagline": "Transform the first days into golden moments that spark energy and creativity.",
+    "primaryCta": "Get Your Copy",
+    "secondaryCta": "Explore Inside",
+    "badges": ["💡 Ready-to-print activities", "🗓 7-day launch plan", "🛡 Satisfaction Guarantee"]
+  },
+
+  "benefits": {
+    "title": "Why this guide?",
+    "subtitle": "A futuristic, practical playbook that launches classroom energy from day one.",
+    "items": [
+      { "icon": "🎯", "title": "Unforgettable First Impression", "text": "Minute-one rituals and welcoming templates for a positive tone." },
+      { "icon": "🌈", "title": "Creative, Energetic Class", "text": "Colorful ice-breakers and activities that build safe engagement." },
+      { "icon": "💡", "title": "Plug-and-Play Ideas", "text": "Printable worksheets and a 7-day golden launch plan." },
+      { "icon": "👭", "title": "Trust & Respect", "text": "Clear classroom norms and smooth parent communication." }
+    ]
+  },
+
+  "inside": {
+    "title": "What’s Inside",
+    "list": [
+      "10 golden secrets for powerful starts.",
+      "First-day ice-breakers (ready to print).",
+      "Positive, low-stress norms framework.",
+      "Relationship-first routines from day one."
+    ],
+    "bonusBadge": "🎁 Bonus Included",
+    "bonusText": "PDF booklet: “First Day Activities” — cards, posters, and a launch-week schedule."
+  },
+  "book": {
+    "image": "/book_e.jpg"
+  },
+  "offers": {
+    "title": "Choose Your Format",
+    "subtitle": "Fair pricing + full satisfaction guarantee.",
+    "plans": [
+      { "title": "eBook (PDF)", "price": "$9.99", "soft": true, "desc": "Instant download", "image": "/soft_e.jpg", "href": "https://dorar.raqmi.store/p/alasrar-althhby-llbdayat-alkoy"},
+      { "title": "Paperback (Amazon)", "price": "Soon", "soft": false, "desc": "Premium print & elegant cover — perfect as a gift.", "image": "/hard_e.jpg", "href": "#"},
+      { "title": "Audiobook", "price": "Soon", "soft": false, "desc": "Listen on the go — warm, clear narration.", "image": "/audio_e.jpg", "href": "#"}
+    ],
+    "cta": "Order Now"
+  },
+
+  "testimonials": {
+    "title": "What Teachers Say",
+    "quotes": [
+      "“My first week transformed — excitement up, calmer momentum, richer engagement.”",
+      "“A clear day-by-day plan — I felt confident from minute one.”"
+    ]
+  },
+
+  "guarantee": {
+    "title": "Full Money-Back Guarantee",
+    "text": "If you don’t see clear momentum in week one, we’ll refund you — no questions."
+  },
+
+  "cta": {
+    "title": "Start Strong — Start Golden",
+    "text": "Join hundreds of teachers who turned week one into an inspiring launch.",
+    "button": "Get Your Copy"
+  },
+
+  "footer": {
+    "rights": "All rights reserved.",
+    "help": "Need help?"
+  }
+}

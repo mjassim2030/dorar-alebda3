@@ -1,0 +1,89 @@
+/* Import fonts (must come first for Vite/PostCSS) */
+@import url('https://fonts.googleapis.com/css2?family=Cairo+Play:wght@400;700;900&family=Noto+Naskh+Arabic:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ----------------------------------------------
+   Brand tokens inspired by the logo
+   - primary  : coral-pink
+   - accent   : sky-blue
+   - surfaces : soft slate/white
+---------------------------------------------- */
+@layer base {
+  :root {
+    /* remap existing vars so App.jsx classes keep working */
+    --gold:  #F45C8A;  /* primary (coral-pink) */
+    --royal: #58D0FF;  /* accent  (sky-blue)   */
+
+    --surface: #FFFFFF;
+    --page:    #F7FAFC;   /* very light cool slate */
+    --ink:     #0F172A;   /* slate-900 */
+  }
+
+  html { scroll-behavior: smooth; }
+  body { background-color: var(--page); color: var(--ink); }
+}
+
+/* language-driven fonts */
+@layer base {
+  html[lang="ar"] { @apply font-arabic; }
+  html[lang="ar"] h1,
+  html[lang="ar"] h2,
+  html[lang="ar"] h3,
+  html[lang="ar"] h4,
+  html[lang="ar"] h5,
+  html[lang="ar"] h6 { @apply font-heading; }
+
+  html[lang="en"] { @apply font-english; }
+}
+
+/* Components */
+@layer components {
+  .container-app {
+    @apply mx-auto px-4 sm:px-5 lg:px-8;
+    max-width: 1080px;
+  }
+}
+
+/* Utilities aligned to the new palette */
+@layer utilities {
+  /* Keep the old class names but feed them the new brand vars */
+  .from-gold {
+    --tw-gradient-from: var(--gold) var(--tw-gradient-from-position);
+    --tw-gradient-to: rgb(244 92 138 / 0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  }
+  .to-royal  { --tw-gradient-to: var(--royal) var(--tw-gradient-to-position); }
+
+  .bg-royal  { background-color: var(--royal); }
+  .text-royal{ color: var(--royal); }
+  .bg-gold   { background-color: var(--gold); }
+
+  .shadow-soft { box-shadow: 0 10px 20px rgba(2, 6, 23, .08); }
+
+  /* Fresh hero using brand tints */
+  .bg-hero-grad {
+    background-image:
+      radial-gradient(1200px 520px at 12% -10%, color-mix(in oklab, var(--royal) 30%, transparent), transparent),
+      radial-gradient(900px 480px at 100% 0, color-mix(in oklab, var(--gold) 28%, transparent), transparent),
+      linear-gradient(180deg, #ffffff, #f9fbfe);
+  }
+
+  /* Subtle animated blobs used in hero */
+  @keyframes float {
+    0%, 100% { transform: translateY(0) }
+    50% { transform: translateY(-10px) }
+  }
+  @keyframes fadeUp {
+    0% { opacity: 0; transform: translateY(12px) }
+    100% { opacity: 1; transform: translateY(0) }
+  }
+  .animate-float { animation: float 6s ease-in-out infinite; }
+  .animate-fadeUp { animation: fadeUp .7s ease-out both; }
+
+  /* Optional helpers (use if you like) */
+  .ring-brand { box-shadow: 0 0 0 3px color-mix(in oklab, var(--royal) 35%, transparent); }
+  .brand-gradient { @apply bg-gradient-to-br from-gold to-royal; }
+}
