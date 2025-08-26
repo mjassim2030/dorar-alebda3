@@ -66,16 +66,16 @@ export default function App() {
         />
 
         {/* Foreground content (top layer) */}
-        <div className="container-app relative z-20 grid items-center gap-10 lg:grid-cols-2">
+        <div className="container-app relative z-20 grid items-center gap-20 lg:grid-cols-2">
           {/* Copy */}
           <div className={`${isAr ? "font-arabic text-start" : "font-english text-start"}`}>
             <p className="font-heading mb-3 inline-flex items-center gap-2 rounded-full border border-white/60 bg-white/50 px-3 py-1 text-sm backdrop-blur">
               <span className="h-1.5 w-1.5 rounded-full bg-royal" /> {t("lang.confidentStart")}
             </p>
 
-<h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-black !leading-[1.25] text-white">
-  {t("hero.title")}
-</h1>
+            <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-black !leading-[1.25] text-white">
+              {t("hero.title")}
+            </h1>
 
             <p className="mt-4 max-w-prose text-slate-100/90 md:text-slate-200/90 md:text-2xl">
               {t("hero.tagline")}
@@ -105,8 +105,8 @@ export default function App() {
 
           {/* Mock */}
           <div className="relative">
-            <div className="rounded-3xl border border-white/40 bg-white/30 p-2 shadow-soft backdrop-blur">
-              <div className="relative mx-auto w-full max-w-[440px] rounded-2xl bg-gray p-2 shadow-soft">
+            <div className="rounded-3xl max-w-[340px] border border-white/40 bg-white/30 p-1 shadow-soft backdrop-blur">
+              <div className="relative mx-auto w-full max-w-[340px] rounded-2xl bg-gray p-2 shadow-soft">
                 <img
                   src={t("book.image")}
                   alt={t("hero.title")}
